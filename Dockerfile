@@ -13,7 +13,6 @@ RUN make install && ldconfig
 WORKDIR /dlib-${DLIB_VERSION}
 RUN pkg-config --libs --cflags dlib-1
 RUN python setup.py install
-RUN pip install dlib
 RUN rm -rf /dlib-${DLIB_VERSION}.tar.bz2
 RUN rm -rf /dlib-${DLIB_VERSION}
 
